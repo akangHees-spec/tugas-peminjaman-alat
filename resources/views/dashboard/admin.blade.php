@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard')
+@section('title', 'Dashboard Admin')
 @section('content')
     <div class="page-wrapper">
         <div class="content container-fluid">

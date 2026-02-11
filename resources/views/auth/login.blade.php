@@ -47,7 +47,7 @@
 
                                     <div class="text-center dont-have">
                                         Don't have an account yet?
-                                        <a href="register.html">Register</a>
+                                        <a href="{{ route('register')}}">Register</a>
                                     </div>
                                 </form>
                             </div>

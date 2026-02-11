@@ -155,10 +155,12 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="profile.html"><i data-feather="user" class="me-1"></i>
                             Profile</a>
-                        <a class="dropdown-item" href="settings.html"><i data-feather="settings" class="me-1"></i>
-                            Settings</a>
-                        <a class="dropdown-item" href="login.html"><i data-feather="log-out" class="me-1"></i>
-                            Logout</a>
+                      <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                        @csrf
+                         <button type="submit" class="dropdown-item" style="border: none; background: none; width: 100%; cursor: pointer;">
+                            <i data-feather="log-out" class="me-1"></i> Logout
+                            </button>
+                        </form>
                     </div>
                 </li>
             </ul>
