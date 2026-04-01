@@ -14,15 +14,20 @@ class KategoriController extends Controller
         return view('admin.kategori.index', compact('categories'));
     }
 
+    public function create()
+    {
+        return view('admin.kategori.create');
+    }
+
     public function store(Request $request)
     {
         $request->validate([
-            'nama_kategori' => 'required|string|max:225',
+            'name_kategori' => 'required|string|max:225',
             'deskripsi' => 'nullable|string'
         ]);
 
         Kategori::create($request->all());
-        return redirect()->back()->with('Success', 'Kategori Berhasil Dibuat :)');
+        return redirect()->route('kategori.index')->with('Success', 'Kategori Berhasil Dibuat :)');
     }
 
     public function update(Request $request, $id)
